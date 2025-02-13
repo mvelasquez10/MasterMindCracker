@@ -3,7 +3,6 @@
 using System.Diagnostics;
 
 Stopwatch _stopwatch = new();
-_stopwatch.Start();
 
 if (args.Length != 1)
 {
@@ -27,5 +26,6 @@ _cracker.OnCrackerReport += (sender, e) =>
         Console.WriteLine($"{_format} {e.Entry}");
 };
 
+_stopwatch.Start();
 _cracker.CreateAttempts();
 _cracker.RunAttempts();
